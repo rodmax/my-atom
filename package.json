@@ -1,0 +1,20 @@
+{
+  "name": "my-atom",
+  "version": "0.0.1",
+  "description": "Backup all i need to restore my atom editor envirenment",
+  "private": true,
+  "main": "app/main.js",
+  "directories": {},
+  "scripts": {},
+  "repository": "",
+  "author": "Maxim Rodionov",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "jit-grunt": "~0.9.1",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-shell": "~1.1.2",
+    "load-grunt-config": "~0.17.2"
+  }
+}
