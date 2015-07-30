@@ -53,3 +53,7 @@
 'atom-text-editor.vim-mode:not(.insert-mode)':
   'ctrl-f': 'unset!'
   'alt-shift-e': 'linter:next-error'
+
+# git-blame toogle to work with vim-mode
+'atom-text-editor':
+  'alt-ctrl-b': 'git-blame:toggle'
