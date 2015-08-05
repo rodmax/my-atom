@@ -10,6 +10,9 @@ module.exports = function(grunt, options) {
     return {
         'save-list': {
             command: 'apm list --installed --bare > ' + options.packagesListFile
+        },
+        'install-list': {
+            command: 'apm install --packages-file ' + options.packagesListFile
         }
     };
 };

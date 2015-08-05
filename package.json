@@ -15,6 +15,7 @@
     "grunt-contrib-copy": "~0.8.0",
     "grunt-contrib-clean": "~0.6.0",
     "grunt-shell": "~1.1.2",
-    "load-grunt-config": "~0.17.2"
+    "load-grunt-config": "~0.17.2",
+    "grunt-confirm": "~1.0.2"
   }
 }

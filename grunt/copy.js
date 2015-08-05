@@ -7,13 +7,18 @@
 **/
 module.exports = function(grunt, options) {
     'use strict';
-    grunt.log.ok(options.atomFiles);
     return {
-        'atom-files': {
+        'to-backup': {
             cwd: '/home/max/.atom',
             src: options.atomFiles,
             dest: options.backupDir,
             expand: true,
         },
+        'from-backup': {
+            dest: '/home/max/.atom',
+            src: options.atomFiles,
+            cwd: options.backupDir,
+            expand: true,
+        }
     };
 };
