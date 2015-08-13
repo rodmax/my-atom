@@ -3,9 +3,10 @@ advanced-new-file@0.4.3
 angularjs@0.3.0
 atom-jasmine@0.6.0
 atom-material-syntax@0.2.1
-atom-ternjs@0.7.0
+atom-ternjs@0.7.1
 autocomplete-python@0.5.3
 color-picker@2.0.9
+docblockr@0.7.3
 ex-mode@0.5.1
 file-icons@1.5.8
 git-blame@0.4.5
@@ -17,7 +18,10 @@ linter-flake8@1.5.0
 linter-htmlhint@0.0.17
 linter-jshint@1.1.2
 linter-jsonlint@0.1.4
+markdown-scroll-sync@0.4.0
 pigments@0.8.4
+project-manager@1.15.11
+project-sidebar@1.3.0
 tab-switcher@1.2.1
 tag@0.3.0
 trailing-spaces@0.3.2
