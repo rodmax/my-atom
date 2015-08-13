@@ -18,28 +18,37 @@
 # https://github.com/bevry/cson#what-is-cson
 '.source.js,.source.stylus,source.c,source.cpp':
     'File copyright header':
-        'prefix': 'fcr'
-        'body': '''
+        prefix: 'fcr'
+        body: """
         /*
          * $1
          *
          * (c) 2015 Synesis LLC.
          * All Rights Reserved.
         **/
-        '''
+        """
 
 '.source.js':
     'require(\'module\')':
-        'prefix': 'req',
-        'body': 'require(\'${1:module}\')'
+        prefix: 'req',
+        body: 'require(\'${1:module}\')'
+
     '\'use strict\';':
-        'prefix': 'us',
-        'body': '\'use strict\';'
+        prefix: 'us',
+        body: '\'use strict\';'
+
     'define(...) block':
-        'prefix': 'define',
-        'body': """
+        prefix: 'define',
+        body: """
         define(function(require) {
             'use strict';
             $1
         });
         """
+    'it(...) block':
+        prefix: 'it'
+        body: """
+        it('${1:description}', function () {
+            $2
+        });
+      """
