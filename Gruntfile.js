@@ -12,6 +12,7 @@ module.exports = function(grunt) {
                 'init.coffee',
                 'keymap.cson',
                 'snippets.cson',
+                'projects.cson',
                 'styles.less'
             ],
             backupDir: 'backup',

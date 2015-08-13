@@ -1,0 +1,20 @@
+'kipod-x':
+    title: 'kipod-x'
+    paths: [
+        '/home/max/work/kipod-x'
+    ]
+    settings:
+        'autocomplete-python':
+            extraPaths: '/home/max/envs/kx/lib/python2.7/site-packages;$PROJECT/dev'
+            pythonPath: '/home/max/envs/kx/bin/python'
+
+'yesreservations':
+    title: 'yesreservations'
+    paths: [
+        '/home/max/work/yesreservations'
+    ]
+    settings:
+        'autocomplete-python':
+            extraPaths: '/home/max/envs/yes/lib/python2.7/site-packages;$PROJECT/apps'
+            pythonPath: '/home/max/envs/yes/bin/python'
+
