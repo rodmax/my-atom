@@ -1,5 +1,6 @@
 'kipod-x':
     title: 'kipod-x'
+    template: 'default-template'
     paths: [
         '/home/max/work/kipod-x'
     ]
@@ -8,8 +9,27 @@
             extraPaths: '/home/max/envs/kx/lib/python2.7/site-packages;$PROJECT/dev'
             pythonPath: '/home/max/envs/kx/bin/python'
 
+
+'kipod-js-plugins':
+    title: 'kp-js-plugins'
+    template: 'default-template'
+    paths: [
+        '/home/max/work/kipod-js-plugins'
+    ]
+
+
+'kipod-station':
+    title: 'kipod-station'
+    paths: [
+        '/home/max/work/kipod-station'
+    ]
+    settings:
+        'editor.tabLength': 2
+
+
 'yesreservations':
     title: 'yesreservations'
+    template: 'default-template'
     paths: [
         '/home/max/work/yesreservations'
     ]
@@ -17,4 +37,21 @@
         'autocomplete-python':
             extraPaths: '/home/max/envs/yes/lib/python2.7/site-packages;$PROJECT/apps'
             pythonPath: '/home/max/envs/yes/bin/python'
+        'linter-flake8':
+            binaryName: "/home/max/envs/yes/bin/flake8"
 
+'my-atom':
+    title: 'my-atom'
+    template: 'default-template'
+    paths: [
+        '/home/max/work/my-atom'
+    ]
+
+
+#
+# Templates definitions
+#
+'default-template':
+    paths: []  # added to prevent exception in project-sidebar
+    settings:
+        'editor.tabLength': 4

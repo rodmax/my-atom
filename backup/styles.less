@@ -48,6 +48,14 @@
      .meta.function-call.python {
          color: rgb(205, 211, 222);
      }
+
+     .lines .line .trailing-whitespace {
+         background: inherit !important;
+         border-bottom: 1px dotted @text-color-warning;
+     }
+     .lines .line.cursor-line .trailing-whitespace {
+         border-bottom: 1px dotted fade(@text-color-warning, 20%);
+     }
  }
 
 atom-text-editor::shadow .git-blame, .atom-text-editor .git-blame {
