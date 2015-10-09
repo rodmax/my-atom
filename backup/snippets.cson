@@ -39,16 +39,29 @@
 
     'define(...) block':
         prefix: 'define',
-        body: """
-        define(function(require) {
-            'use strict';
-            $1
-        });
-        """
+        body:
+            """
+            define(function(require) {
+                'use strict';
+                $1
+            });
+            """
     'it(...) block':
         prefix: 'it'
-        body: """
-        it('${1:description}', function () {
-            $2
-        });
-      """
+        body:
+            """
+            it('$1', function () {
+                $2
+            });
+            """
+    'function() {}':
+        prefix: 'f'
+        body: 'function($1) {$2}'
+    'function <name>() {}':
+        prefix: 'fun'
+        body:
+            """
+            function ${1:funcName}($2) {
+                $3
+            }
+            """

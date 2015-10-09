@@ -8,10 +8,13 @@
         'autocomplete-python':
             extraPaths: '/home/max/envs/kx/lib/python2.7/site-packages;$PROJECT/dev'
             pythonPath: '/home/max/envs/kx/bin/python'
+        'linter-flake8':
+            executablePath: '/home/max/envs/kx/bin/flake8'
+            ignoreErrorCodes: ['E128', 'C901']
 
 
 'kipod-js-plugins':
-    title: 'kp-js-plugins'
+    title: 'kipod-js-plugins'
     template: 'default-template'
     paths: [
         '/home/max/work/kipod-js-plugins'
@@ -38,7 +41,7 @@
             extraPaths: '/home/max/envs/yes/lib/python2.7/site-packages;$PROJECT/apps'
             pythonPath: '/home/max/envs/yes/bin/python'
         'linter-flake8':
-            binaryName: "/home/max/envs/yes/bin/flake8"
+            binaryName: '/home/max/envs/yes/bin/flake8'  # is it working ? see kipod-x above
 
 'my-atom':
     title: 'my-atom'
