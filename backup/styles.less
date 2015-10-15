@@ -59,6 +59,14 @@
 
  }
 
+ // Fix to make code in markdown-preview selectable
+ .markdown-preview.markdown-preview atom-text-editor::shadow {
+     .source {
+         -webkit-user-select: initial;
+     }
+ }
+
+
 //Git blame plugin path
 atom-text-editor::shadow .git-blame, .atom-text-editor .git-blame {
     width: 270px !important;
