@@ -65,3 +65,9 @@
                 $3
             }
             """
+    '.prototype':
+        prefix: 'proto'
+        body: 'prototype'
+    'proto.something':
+        prefix: 'protof'
+        body: 'proto.${1:name} = function(${2}) {${3}};'

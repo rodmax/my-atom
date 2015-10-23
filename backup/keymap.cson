@@ -19,25 +19,6 @@
 # You can find more information about keymaps in these guides:
 # * https://atom.io/docs/latest/using-atom-basic-customization#customizing-key-bindings
 # * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
-#
-# This file uses CoffeeScript Object Notation (CSON).
-# If you are unfamiliar with CSON, you can read more about it here:
-# https://github.com/bevry/cson#what-is-cson
-# 'atom-text-editor.vim-mode.visual-mode':
-#   'j':      'vim-mode-visual-block:j'
-#   'k':      'vim-mode-visual-block:k'
-#   'h':      'vim-mode-visual-block:h'
-#   'l':      'vim-mode-visual-block:l'
-#   'I':      'vim-mode-visual-block:I'
-#   'A':      'vim-mode-visual-block:A'
-#   'D':      'vim-mode-visual-block:D'
-#   'C':      'vim-mode-visual-block:C'
-#   'o':      'vim-mode-visual-block:o'
-#   'escape': 'vim-mode-visual-block:escape'
-#   'ctrl-[': 'vim-mode-visual-block:escape'
-#   'ctrl-c': 'vim-mode-visual-block:escape'
-#   'ctrl-v': 'vim-mode:activate-blockwise-visual-mode'
-
 'atom-workspace atom-text-editor:not([mini]).autocomplete-active':
   'alt-k': 'core:move-up'
   'alt-j': 'core:move-down'
@@ -49,11 +30,22 @@
   'alt-h': 'core:move-left'
   'alt-l': 'core:move-right'
 
-# unset vim-mode to enable find & replace in current pane
 'atom-text-editor.vim-mode:not(.insert-mode)':
+  # unset vim-mode to enable find & replace in current pane
   'ctrl-f': 'unset!'
   'alt-shift-e': 'linter:next-error'
 
 # git-blame toogle to work with vim-mode
 'atom-text-editor':
   'alt-ctrl-b': 'git-blame:toggle'
+
+# change keymap to prevent conflict with "open file" functionality
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-alt-]': 'symbols-tree-view:toggle'
+
+# Use the same bindings for all go-to-definition resources
+'.platform-linux atom-text-editor[data-grammar="source python"]:not(.mini)':
+  'ctrl-]': 'autocomplete-python:go-to-definition'
+
+'.platform-linux atom-text-editor[data-grammar="source js"]:not(.mini)':
+  'ctrl-]': 'tern:definition'
