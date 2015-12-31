@@ -5,13 +5,21 @@
         '/home/max/work/kipod-x'
     ]
     settings:
-        'autocomplete-python':
-            extraPaths: '/home/max/envs/kx/lib/python2.7/site-packages;$PROJECT/dev'
-            pythonPath: '/home/max/envs/kx/bin/python'
-        'linter-flake8':
-            executablePath: '/home/max/envs/kx/bin/flake8'
-            ignoreErrorCodes: ['E128', 'C901']
-
+        '*':
+            core:
+                ignoredNames: [
+                    '.git',
+                    'dev/webui/app/kp/'
+                ],
+            'autocomplete-python':
+                extraPaths: '/home/max/envs/kx/lib/python2.7/site-packages;$PROJECT/dev'
+                pythonPath: '/home/max/envs/kx/bin/python'
+            'linter-flake8':
+                executablePath: '/home/max/envs/kx/bin/flake8'
+                ignoreErrorCodes: [
+                    'E128'
+                    'C901'
+                ]
 
 'kipod-js-plugins':
     title: 'kipod-js-plugins'
@@ -19,42 +27,46 @@
     paths: [
         '/home/max/work/kipod-js-plugins'
     ]
-
+    settings:
+        '.js.source':
+            editor:
+                tabLength: 4
+        '.stylus.source':
+            editor:
+                tabLength: 4
+        '.html.text':
+            editor:
+                tabLength: 4
 
 'kipod-station':
     title: 'kipod-station'
+    template: 'default-template'
     paths: [
         '/home/max/work/kipod-station'
     ]
-    settings:
-        'editor.tabLength': 2
 
-
-'yesreservations':
-    title: 'yesreservations'
-    template: 'default-template'
-    paths: [
-        '/home/max/work/yesreservations'
-    ]
-    settings:
-        'autocomplete-python':
-            extraPaths: '/home/max/envs/yes/lib/python2.7/site-packages;$PROJECT/apps'
-            pythonPath: '/home/max/envs/yes/bin/python'
-        'linter-flake8':
-            binaryName: '/home/max/envs/yes/bin/flake8'  # is it working ? see kipod-x above
-
-'my-atom':
-    title: 'my-atom'
-    template: 'default-template'
-    paths: [
-        '/home/max/work/my-atom'
-    ]
-
-
+# yesreservations:
+#   title: 'yesreservations'
+#   template: 'default-template'
+#   paths: [
+#     '/home/max/work/yesreservations'
+#   ]
+#   settings:
+#     'autocomplete-python':
+#       extraPaths: '/home/max/envs/yes/lib/python2.7/site-packages;$PROJECT/apps'
+#       pythonPath: '/home/max/envs/yes/bin/python'
+#     'linter-flake8':
+#       binaryName: '/home/max/envs/yes/bin/flake8'
 #
-# Templates definitions
-#
+# 'my-atom':
+#   title: 'my-atom'
+#   template: 'default-template'
+#   paths: [
+#     '/home/max/work/my-atom'
+#   ]
+
 'default-template':
-    paths: []  # added to prevent exception in project-sidebar
     settings:
-        'editor.tabLength': 4
+        '*':
+            editor:
+                tabLength: 4
