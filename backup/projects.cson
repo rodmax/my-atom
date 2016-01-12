@@ -45,6 +45,13 @@
         '/home/max/work/kipod-station'
     ]
 
+'vivi':
+    title: 'vivi (proxy)'
+    template: 'default-template'
+    paths: [
+        '/home/max/work/vivi'
+    ]
+
 # yesreservations:
 #   title: 'yesreservations'
 #   template: 'default-template'
