@@ -21,13 +21,21 @@
         prefix: 'fcr'
         body: """
         /*
+         * Copyright (C) 2016 Synesis LLC. All rights reserved.
+         * Author Maxim Rodionov <max.rodionov@synesis.ru>, Synesis LLC www.synesis.ru.
+         */
+        /*
          * $1
-         *
-         * (c) 2016 Synesis LLC.
-         * All Rights Reserved.
-         *
-         * Maxim Rodionov <max.rodionov@synesis.ru>
         **/
+        """
+
+'.source.html,[data-grammar="source gfm"]':
+        prefix: 'fcr'
+        body: """
+        <!--
+         Copyright (C) 2016 Synesis LLC. All rights reserved.
+         Author Maxim Rodionov <max.rodionov@synesis.ru>, Synesis LLC www.synesis.ru.
+        -->
         """
 
 '.source.js':
@@ -43,7 +51,7 @@
         prefix: 'define',
         body:
             """
-            define(function(require) {
+            define(function (require) {
                 'use strict';
                 $1
             });
@@ -56,14 +64,14 @@
                 $2
             });
             """
-    'function() {}':
+    'function () {}':
         prefix: 'f'
-        body: 'function($1) {$2}'
+        body: 'function ($1) {$2}'
     'function <name>() {}':
         prefix: 'fun'
         body:
             """
-            function ${1:funcName}($2) {
+            function ${1:funcName} ($2) {
                 $3
             }
             """
@@ -72,4 +80,4 @@
         body: 'prototype'
     'proto.something':
         prefix: 'protof'
-        body: 'proto.${1:name} = function(${2}) {${3}};'
+        body: 'proto.${1:name} = function (${2}) {${3}};'

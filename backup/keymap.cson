@@ -49,3 +49,6 @@
 
 '.platform-linux atom-text-editor[data-grammar="source js"]:not(.mini)':
   'ctrl-]': 'tern:definition'
+
+'.platform-linux atom-text-editor:not(.mini)':
+  'ctrl-e': 'emmet:expand-abbreviation'
