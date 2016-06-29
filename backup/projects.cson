@@ -3,38 +3,13 @@
   paths: [
     "/home/max/work/kipod-js-plugins"
   ]
-  template: "default-template"
 "kipod-js-plugins":
   title: "kipod-js-plugins"
   paths: [
     "/home/max/work/kipod-js-plugins"
-    "/home/max/work/kipod-x"
   ]
-  settings:
-    ".js.source":
-      editor:
-        tabLength: 4
-    ".stylus.source":
-      editor:
-        tabLength: 4
-    ".html.text":
-      editor:
-        tabLength: 4
-  template: "default-template"
 "kipod-station":
   title: "kipod-station"
-  template: "default-template"
   paths: [
     "/home/max/work/kipod-station"
   ]
-vivi:
-  title: "vivi (proxy)"
-  template: "default-template"
-  paths: [
-    "/home/max/work/vivi"
-  ]
-"default-template":
-  settings:
-    "*":
-      editor:
-        tabLength: 4

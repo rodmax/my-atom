@@ -60,7 +60,7 @@
         prefix: 'it'
         body:
             """
-            it('$1', function () {
+            it ('$1', function () {
                 $2
             });
             """
@@ -71,7 +71,7 @@
         prefix: 'fun'
         body:
             """
-            function ${1:funcName} ($2) {
+            function ${1:funcName}($2) {
                 $3
             }
             """
