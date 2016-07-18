@@ -30,6 +30,10 @@
   'alt-h': 'core:move-left'
   'alt-l': 'core:move-right'
 
+'.advanced-open-file':
+  'alt-k': 'advanced-open-file:move-cursor-up'
+  'alt-j': 'advanced-open-file:move-cursor-down'
+
 'atom-text-editor.vim-mode:not(.insert-mode)':
   # unset vim-mode to enable find & replace in current pane
   'ctrl-f': 'unset!'
