@@ -64,6 +64,14 @@
                 $2
             });
             """
+    'describe(...) block':
+        prefix: 'des'
+        body:
+            """
+            describe ('$1', function () {
+                $2
+            });
+            """
     'function () {}':
         prefix: 'f'
         body: 'function ($1) {$2}'
