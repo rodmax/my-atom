@@ -9,10 +9,13 @@ module.exports = function(grunt, options) {
     'use strict';
     return {
         'save-list': {
-            command: 'apm list --installed --bare > ' + options.packagesListFile
+            command: 'apm list --installed --bare | grep --invert-match language-html > ' + options.packagesListFile
         },
         'install-list': {
-            command: 'apm install --packages-file ' + options.packagesListFile
+            command: [
+                'apm install --packages-file ' + options.packagesListFile,
+                'apm install rodmax/language-html',
+            ].join('; '),
         }
     };
 };

@@ -42,5 +42,4 @@ vim-mode-visual-block@0.2.15
 vim-surround@0.8.1
 zentabs@0.8.6
 
-language-html@0.44.1
 
