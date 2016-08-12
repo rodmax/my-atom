@@ -60,7 +60,7 @@
         prefix: 'it'
         body:
             """
-            it ('$1', function () {
+            it('$1', function () {
                 $2
             });
             """
@@ -89,3 +89,11 @@
     'proto.something':
         prefix: 'protof'
         body: 'proto.${1:name} = function (${2}) {${3}};'
+    '/** multiline comm.':
+        prefix: '/*'
+        body:
+            """
+            /*
+            * ${1}
+            */
+            """
