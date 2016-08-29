@@ -11,7 +11,7 @@ module.exports = function(grunt) {
             atomFiles: [
                 'init.coffee',
                 'keymap.cson',
-                'snippets.cson',
+                'snippets/*',
                 'projects.cson',
                 'styles.less'
             ],

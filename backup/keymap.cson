@@ -34,10 +34,11 @@
   'alt-k': 'advanced-open-file:move-cursor-up'
   'alt-j': 'advanced-open-file:move-cursor-down'
 
-'atom-text-editor.vim-mode:not(.insert-mode)':
-  # unset vim-mode to enable find & replace in current pane
-  'ctrl-f': 'unset!'
-  'alt-shift-e': 'linter:next-error'
+'atom-workspace atom-text-editor.vim-mode:not(.insert-mode)':
+  '/': 'unset!' # used to open atom finder
+  '/': 'find-and-replace:show'
+  'ctrl-j': 'core:page-down'
+  'ctrl-k': 'core:page-up'
 
 # git-blame toogle to work with vim-mode
 'atom-text-editor':
@@ -52,7 +53,13 @@
   'ctrl-]': 'autocomplete-python:go-to-definition'
 
 '.platform-linux atom-text-editor[data-grammar="source js"]:not(.mini)':
-  'ctrl-]': 'tern:definition'
+  'ctrl-]': 'atom-ternjs:definition'
 
 '.platform-linux atom-text-editor:not(.mini)':
   'ctrl-e': 'emmet:expand-abbreviation'
+
+# We disable all docblockr keys expect below
+'atom-text-editor:not([mini])':
+  'enter': 'docblockr:parse-enter'
+'atom-text-editor:not([mini])':
+  'ctrl-alt-j': 'emmet:matching-pair'

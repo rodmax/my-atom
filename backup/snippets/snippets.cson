@@ -16,26 +16,14 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
-'.source.js,.source.stylus,source.c,source.cpp':
-    'File copyright header':
-        prefix: 'fcr'
-        body: """
-        /*
-         * Copyright (C) 2016 Synesis LLC. All rights reserved.
-         * Author Maxim Rodionov <max.rodionov@synesis.ru>, Synesis LLC www.synesis.ru.
-         */
-        /*
-         * $1
-        **/
-        """
 
-'.source.html,[data-grammar="source gfm"]':
-        prefix: 'fcr'
+'.source.js,.source.stylus,source.c,source.cpp':
+    'Multiline comment':
+        prefix: '/*'
         body: """
-        <!--
-         Copyright (C) 2016 Synesis LLC. All rights reserved.
-         Author Maxim Rodionov <max.rodionov@synesis.ru>, Synesis LLC www.synesis.ru.
-        -->
+        /*
+        * ${1}
+        */
         """
 
 '.source.js':
@@ -68,7 +56,7 @@
         prefix: 'des'
         body:
             """
-            describe ('$1', function () {
+            describe('$1', function () {
                 $2
             });
             """
@@ -86,14 +74,6 @@
     '.prototype':
         prefix: 'proto'
         body: 'prototype'
-    'proto.something':
-        prefix: 'protof'
-        body: 'proto.${1:name} = function (${2}) {${3}};'
-    '/** multiline comm.':
-        prefix: '/*'
-        body:
-            """
-            /*
-            * ${1}
-            */
-            """
+    'x => y(x)':
+        prefix: 'af',
+        body: '${1:(arguments)} => ${2:statement}'
