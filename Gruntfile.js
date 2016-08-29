@@ -10,6 +10,7 @@ module.exports = function(grunt) {
         data: {
             atomFiles: [
                 'init.coffee',
+                'config.cson',
                 'keymap.cson',
                 'snippets/*',
                 'projects.cson',
