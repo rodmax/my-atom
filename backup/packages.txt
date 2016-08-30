@@ -33,7 +33,7 @@ project-plus@0.9.0
 python-indent@0.4.3
 symbols-tree-view@0.11.0
 tab-switcher@1.5.3
-terminal-plus@0.14.5
+term3@0.22.1
 trailing-spaces@0.3.2
 vim-mode@0.65.1
 vim-mode-visual-block@0.2.15
