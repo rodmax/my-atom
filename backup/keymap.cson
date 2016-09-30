@@ -22,6 +22,11 @@
 'atom-workspace':
   'ctrl-`': 'term3:open'
 
+'atom-workspace .term3.term3':
+  'ctrl-p': 'unset!'
+  'ctrl-insert': 'term3:copy'
+  'shift-insert': 'term3:paste'
+
 'atom-workspace atom-text-editor:not([mini]).autocomplete-active':
   'alt-k': 'core:move-up'
   'alt-j': 'core:move-down'
@@ -42,6 +47,7 @@
   '/': 'find-and-replace:show'
   'ctrl-j': 'core:page-down'
   'ctrl-k': 'core:page-up'
+  'ctrl-tab': 'linter:next-error'
 
 # git-blame toogle to work with vim-mode
 'atom-text-editor':
@@ -60,9 +66,9 @@
 
 '.platform-linux atom-text-editor:not(.mini)':
   'ctrl-e': 'emmet:expand-abbreviation'
+  "ctrl-shift-'": 'emmet:update-tag'
+  'ctrl-alt-j': 'emmet:matching-pair'
 
 # We disable all docblockr keys expect below
 'atom-text-editor:not([mini])':
   'enter': 'docblockr:parse-enter'
-'atom-text-editor:not([mini])':
-  'ctrl-alt-j': 'emmet:matching-pair'

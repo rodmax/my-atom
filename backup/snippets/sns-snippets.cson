@@ -34,7 +34,7 @@
             export const fullName = mod.name + '.$2';
             mod.controller(fullName, $2);
 
-            $2.inject = [
+            $2.$inject = [
             ];
             function $2() {
                 const $ctrl = angular.extend(this, {
@@ -49,18 +49,19 @@
 
             export const fullName = 'ks$2';
             mod.component(fullName, {
-                binding: {
+                bindings: {
                 },
-                controller: $2Ctrl
-                temlate: '',
+                controller: $2Ctrl,
+                template: '',
             });
 
-            $2Ctrl.inject = [
+            $2Ctrl.$inject = [
             ];
             function $2Ctrl() {
                 const $ctrl = angular.extend(this, {
                 });
             }
+
             """
     ngService:
         prefix: 'srv'
@@ -71,7 +72,7 @@
             export const fullName = mod.name + '.$2';
             mod.service(fullName, $3);
 
-            $3.inject = [
+            $3.$inject = [
             ];
             function $3() {
                 const $2 = angular.extend(this, {
@@ -81,13 +82,16 @@
     ngTest:
         prefix: 'test'
         body: """
-            import tests from 'tests/main';
+            import * as tests from 'tests/main';
 
-            describe(__dirname, function () {
+            describe(__filename, function () {
                 let ctx;
-                Given(() => ctx = tests.getCtx());
+                Given(function () {
+                    ctx = tests.getCtx();
+                });
 
                 describe('$1', function () {
                 });
             });
+
             """

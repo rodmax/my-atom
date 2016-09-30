@@ -31,7 +31,7 @@
     vendors: [
       "ui/src"
       "./"
-      "dev/webui/app"
+      "webui/app"
     ]
   "autocomplete-plus":
     strictMatching: true
@@ -48,7 +48,6 @@
       "turbo-javascript"
       "minimap"
       "autocomplete-html"
-      "linter-jshint"
       "linter-jscs"
       "symbols-tree-view"
       "pigments"
@@ -99,6 +98,7 @@
   jshint:
     validateOnlyOnSave: true
   linter:
+    errorPanelHeight: 24
     inlineTooltipInterval: 100
     lintOnFly: false
     showErrorTabProject: false
@@ -116,6 +116,7 @@
     onlyConfig: true
     preset: "yandex"
   "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
     executablePath: "/home/max/.nvm/versions/v0.12.7/bin/jshint"
     lintInlineJavaScript: true
   "linter-stylint":
@@ -165,21 +166,21 @@
     ansiColors:
       normal:
         blue:
-          red: 92
-          green: 92
-          blue: 243
           alpha: 1
+          blue: 243
+          green: 92
+          red: 92
       zBright:
         brightBlue:
-          red: 143
-          green: 143
+          alpha: 1
           blue: 198
-          alpha: 1
+          green: 143
+          red: 143
         brightGreen:
-          red: 93
-          green: 136
-          blue: 93
           alpha: 1
+          blue: 93
+          green: 136
+          red: 93
     core:
       autoRunCommand: " "
     style:
