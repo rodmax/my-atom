@@ -117,7 +117,6 @@
     preset: "yandex"
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
-    executablePath: "/home/max/.nvm/versions/v0.12.7/bin/jshint"
     lintInlineJavaScript: true
   "linter-stylint":
     executablePath: "/home/max/work/kipod-js-plugins/node_modules/.bin/stylint"

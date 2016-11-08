@@ -95,3 +95,27 @@
             });
 
             """
+    ngMain:
+        prefix: 'ngmain'
+        body: """
+            import mod from './module';
+            import {configFnForL10n} from 'app/core/l10n_srv';
+            import l10n from './l10n';
+
+            export default mod.config(configFnForL10n(l10n));
+
+            """
+    ngModule:
+        prefix: 'ngmodule'
+        body: """
+            import angular from 'angular';
+            export default angular.module('ks.$1', []);
+
+            """
+    ngl10n:
+        prefix: 'ngl10n'
+        body: """
+            export default {$1: {
+            }};
+
+            """
