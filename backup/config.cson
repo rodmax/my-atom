@@ -191,6 +191,8 @@
   "tree-view":
     hideIgnoredNames: true
   "vim-mode": {}
+  "vim-mode-plus":
+    incrementalSearch: true
   "vim-surround": {}
   welcome:
     showOnStartup: false
